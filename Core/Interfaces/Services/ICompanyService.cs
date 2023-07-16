@@ -1,4 +1,4 @@
-﻿using Core.DBModels.Entities;
+﻿using Core.DBModels;
 using Core.Models;
 using System;
 using System.Collections.Generic;

@@ -1,5 +1,5 @@
 ﻿using Application.Dtos;
-using Core.DBModels.Entities;
+using Core.DBModels;
 using Core.Interfaces.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

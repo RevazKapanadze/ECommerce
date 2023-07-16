@@ -11,7 +11,7 @@ namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20230716080718_companies")]
-    partial class companies
+    partial class Companies
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

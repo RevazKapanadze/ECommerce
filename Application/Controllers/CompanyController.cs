@@ -1,6 +1,6 @@
 ﻿
 using Application.Dtos;
-using Core.DBModels.Entities;
+using Core.DBModels;
 using Core.Interfaces.Repositories;
 using Core.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -41,6 +41,7 @@ namespace Application.Controllers
                 IsActive = true,
                 IsPaid = true,
                 IsDeleted = false,
+                HasMainCategory = false,
                 CreatedAt = DateTime.Now,
                 CreatedBy = userId
             };

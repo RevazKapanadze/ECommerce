@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.DBModels.Entities
+
+namespace Core.DBModels
 {
     public class Company
     {
@@ -17,6 +18,7 @@ namespace Core.DBModels.Entities
         public bool IsActive { get; set; }
         public bool IsPaid { get; set; }
         public bool IsDeleted { get; set; }
+        public bool HasMainCategory { get; set; }
         public int PaymentDay { get; set; }
         public string? ThemeColour { get; set; }
         public DateTime CreatedAt { get; set; }

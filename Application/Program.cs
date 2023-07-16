@@ -1,5 +1,5 @@
 using AutoMapper;
-using Core.DBModels.Entities;
+using Core.DBModels;
 using Core.Interfaces.Repositories;
 using Core.Interfaces.Services;
 using Core.Services;

@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
-namespace Core.DBModels.Entities
+﻿
+using Microsoft.AspNetCore.Identity;
+namespace Core.DBModels
 {
     public class User : IdentityUser
     {

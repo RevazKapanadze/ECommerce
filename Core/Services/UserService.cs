@@ -1,4 +1,4 @@
-﻿using Core.DBModels.Entities;
+﻿using Core.DBModels;
 using Core.Interfaces.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;

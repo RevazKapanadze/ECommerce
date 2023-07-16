@@ -1,4 +1,5 @@
-﻿using Core.DBModels.Entities;
+﻿using Core.DBModels;
+using Core.DBModels.ManyToMany;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;

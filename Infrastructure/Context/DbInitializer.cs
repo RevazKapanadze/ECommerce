@@ -1,5 +1,5 @@
 ﻿
-using Core.DBModels.Entities;
+using Core.DBModels;
 using Microsoft.AspNetCore.Identity;
 
 namespace Infrastructure.Context
