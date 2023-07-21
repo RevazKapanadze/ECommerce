@@ -1,4 +1,5 @@
 ﻿using Core.DBModels;
+using Core.Interfaces.Repositories;
 using Core.Interfaces.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -15,10 +16,11 @@ namespace Core.Services
     public class UserService : IUserService
     {
         private readonly IConfiguration _config;
-
-        public UserService(IConfiguration config)
+        private readonly IUserRepository userRepository;
+        public UserService(IConfiguration config, IUserRepository userRepository)
         {
             _config = config;
+            this.userRepository = userRepository;
         }
         public string GenerateToken(User user, IList<string> userRoles)
         {
@@ -26,7 +28,7 @@ namespace Core.Services
             {
                 new Claim(ClaimTypes.Email,user.Email),
                 new Claim(ClaimTypes.Name,user.UserName)
-            };          
+            };
             foreach (var role in userRoles)
             {
                 claims.Add(new Claim(ClaimTypes.Role, role));

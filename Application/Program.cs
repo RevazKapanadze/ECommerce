@@ -65,6 +65,7 @@ var mapperConfig = AutoMapperInitializer.Initialize();
 IMapper mapper = mapperConfig.CreateMapper();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddScoped<ICompanyService, CompanyService>();
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
@@ -92,6 +93,7 @@ builder.Services
                   };
               });
 builder.Services.AddAuthorization();
+builder.Services.AddCors();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -117,7 +119,13 @@ catch (Exception ex)
     logger.LogError(ex, "migrations problem");
 }
 app.UseHttpsRedirection();
-
+app.UseCors(opt =>
+{
+    opt
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .WithOrigins("http://localhost:3000");
+});
 app.UseAuthorization();
 
 app.MapControllers();

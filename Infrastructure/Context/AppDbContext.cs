@@ -21,6 +21,10 @@ public class AppDbContext : IdentityDbContext<User, IdentityRole, string, Identi
         .WithMany(u => u.Companies)
         .HasForeignKey(c => c.CreatedBy);
 
+        builder.Entity<Company>()
+        .HasIndex(c => c.Name)
+        .IsUnique();
+
         /*builder.Entity<UserCompany>()
             .HasKey(uc => new { uc.UserId, uc.CompanyId });
 
