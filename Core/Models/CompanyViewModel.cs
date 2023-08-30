@@ -11,7 +11,7 @@ namespace Core.Models
         public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? NameForUrl { get; set; }
-        
+         
         public string? ThemeColour { get; set; }
     }
 }
